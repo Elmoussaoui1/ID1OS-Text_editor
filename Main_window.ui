@@ -48,6 +48,7 @@
     </property>
     <addaction name="actionopen"/>
     <addaction name="actionsave"/>
+    <addaction name="actionClose"/>
    </widget>
    <widget class="QMenu" name="menuoptions">
     <property name="title">
@@ -119,6 +120,11 @@
   <action name="actionArial_Rounded_MT_Bold">
    <property name="text">
     <string>Arial Rounded MT Bold</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
    </property>
   </action>
  </widget>

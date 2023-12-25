@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QCloseEvent, QFont
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget 
 
@@ -31,6 +31,7 @@ class MyGUI(QMainWindow):
         #Pour ouvrir et sauvegarder les fichiers
         self.actionopen.triggered.connect(self.open_file)
         self.actionsave.triggered.connect(self.save_file)
+        self.actionClose.triggered.connect(self.closeEvent)
 
     def open_file(self):
         options = QFileDialog.Options()
@@ -45,8 +46,24 @@ class MyGUI(QMainWindow):
         if filename != "":
             with open(filename, "w") as f:
                 f.write(self.plainTextEdit.toPlainText())
-    
-    
+
+    def closeEvent(self,event):
+        dialog = QMessageBox()
+        dialog.setText("Do you want to save your work ?")
+        dialog.addButton(QPushButton("Yes"),QMessageBox.YesRole)
+        dialog.addButton(QPushButton("No"),QMessageBox.NoRole)
+        dialog.addButton(QPushButton("Cancel"),QMessageBox.RejectRole)
+        usr_reposne = dialog.exec_()
+        if usr_reposne == 0:
+            self.save_file()
+            event.accept()
+        elif usr_reposne == 2:
+            event.ignore()
+
+
+
+
+
     def change_font(self, nom_fonte):
         self.police =nom_fonte
         self.apply_font()
