@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>641</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QPlainTextEdit::NoWrap</enum>
+      </property>
+      <property name="plainText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>782</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <widget class="QMenu" name="menuoptions">
+    <property name="title">
+     <string>options</string>
+    </property>
+    <widget class="QMenu" name="menusize">
+     <property name="title">
+      <string>Size</string>
+     </property>
+     <addaction name="action12"/>
+     <addaction name="action18"/>
+     <addaction name="action24"/>
+    </widget>
+    <widget class="QMenu" name="menuPolice">
+     <property name="title">
+      <string>Police</string>
+     </property>
+     <addaction name="actionArial"/>
+     <addaction name="actionTimes_New_Roman"/>
+     <addaction name="actionArial_Rounded_MT_Bold"/>
+    </widget>
+    <addaction name="menusize"/>
+    <addaction name="menuPolice"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuoptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionpolices">
+   <property name="text">
+    <string>polices</string>
+   </property>
+  </action>
+  <action name="action12">
+   <property name="text">
+    <string>12</string>
+   </property>
+  </action>
+  <action name="action18">
+   <property name="text">
+    <string>18</string>
+   </property>
+  </action>
+  <action name="action24">
+   <property name="text">
+    <string>24</string>
+   </property>
+  </action>
+  <action name="actionArial">
+   <property name="text">
+    <string>Arial</string>
+   </property>
+  </action>
+  <action name="actionTimes_New_Roman">
+   <property name="text">
+    <string>Times New Roman </string>
+   </property>
+  </action>
+  <action name="actionArial_Rounded_MT_Bold">
+   <property name="text">
+    <string>Arial Rounded MT Bold</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
